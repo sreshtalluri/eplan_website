@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../lib/supabaseClient';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -30,7 +31,7 @@ export default function Home() {
         <Navbar />
         <div className="container py-5">
         <div className="text-center mb-5">
-            <h1 className="display-4 text-primary mb-3">Welcome to Event Planner!!!</h1>
+            <h1 className="display-4 text-primary mb-3">Welcome to Event Planner!</h1>
             <p className="lead">Easily find venues, musicians, caterers, photographers, and videographers for your big day.</p>
             {user ? (
             <button onClick={handleSignOut} className="btn btn-danger mt-3">Sign Out</button>
